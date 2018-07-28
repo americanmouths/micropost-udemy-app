@@ -25,6 +25,46 @@ class UI {
     });
     this.post.innerHTML = output;
   }
+
+  showAlert(message, className){
+    this.clearAlert();
+
+    //Create DIV
+    const div = document.createElement('div');
+
+    //Add classes 
+    div.className = className;
+
+    //Add text 
+    div.appendChild(document.createTextNode(message));
+
+    //Get parent 
+    const container = document.querySelector('.postsContainer');
+
+    //Get post div
+    const postDiv = document.querySelector('#posts');
+
+    //Insert alert
+    container.insertBefore(div, postDiv);
+
+    //Clear after 3 seconds
+    setTimeout(() => {
+      this.clearAlert();
+    }, 3000);
+
+  }
+
+  clearAlert(){
+    const currentAlert = document.querySelector('.alert');
+    if (currentAlert){
+      currentAlert.remove();
+    }
+  }
+
+  clearFields(){
+    this.titleInput.value = '';
+    this.bodyInput.value = '';
+  }
 }
 
 export const ui = new UI();
