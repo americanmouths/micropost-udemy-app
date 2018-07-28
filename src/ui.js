@@ -5,7 +5,7 @@ class UI {
     this.bodyInput = document.querySelector('#body');
     this.idInput = document.querySelector('#id');
     this.postSubmit = document.querySelector('.post-submit');
-    this.forState = 'add';
+    this.formState = 'add';
   }
 
   //Show all posts
@@ -82,7 +82,7 @@ class UI {
   clearIdInput(){
     this.idInput.value = '';
   }
-  
+
   //Change form state
   changeFormState(type){
     if(type === 'edit'){
