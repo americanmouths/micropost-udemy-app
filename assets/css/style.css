@@ -1,0 +1,13 @@
+.delete {
+  color: red;
+  margin-left: 6px;
+}
+
+.head {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.2em;
+}
